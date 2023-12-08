@@ -1,3 +1,4 @@
+CSS:
 body {
   margin: 0;
   padding: 0;
@@ -19,40 +20,48 @@ body {
   object-fit: cover;
 }
 
-.message {
+.message-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2; /* Place the message above the overlay */
+}
+
+.message-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Black with 50% transparency */
+  padding: 20px;
+  border-radius: 15px; /* Add rounded corners */
+  text-align: center;
   color: #fff;
 }
 
-.message h2 {
+.message-box h2 {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.message p {
+.message-box p {
   font-size: 24px;
 }
 
-.snow{
-  position:  absolute;
-  top:0;
+.snow {
+  position: absolute;
+  top: 0;
   left: 0;
   width: 50px;
   height: 50px;
   background-image: url(icon.png);
   background-size: cover;
-  animation:  animationSnow 3s ease-in-out infinite;
-
+  animation: animationSnow 3s ease-in-out infinite;
 }
-@keyframes animationSnow{
-  0%{
-      transform: translate(0,0);
+
+@keyframes animationSnow {
+  0% {
+      transform: translate(0, 0);
   }
-  100%{
-      transform: translate(100px,50vh)
+  100% {
+      transform: translate(100px, 50vh);
   }
 }
